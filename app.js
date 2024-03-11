@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express")
 const request = require("request")
 const bodyParser = require("body-parser")
@@ -40,7 +41,7 @@ app.post("/", function (req, res) {
     const options = {
         method: "POST",
         headers: {
-            Authorization: "auth bdc0802697241529a35bfb133842b6e6-us22"
+            Authorization: process.env.API_KEY
 
         }
 
